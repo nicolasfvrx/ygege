@@ -698,7 +698,7 @@ fn parse_nip35_event(event: Value) -> Option<Torrent> {
         magnet.push_str(&format!("&tr={}", encode(tracker)));
     }
 
-    let link = format!("https://ygg.gratis/#/torrent/{}", event_id);
+    let link = format!("https://ygg.gratis/#/e/{}", event_id);
 
     // Prefer published_at tag over event created_at (mirrors ygg.gratis behaviour)
     let age_stamp = get_tag("published_at")
